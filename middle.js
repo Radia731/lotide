@@ -26,8 +26,16 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
+const middle = function(array) {
+   const middleArray = [];
+        if (array.length <= 2) {
+          return middleArray;
+  } else if (array.length % 2 !== 0) {
+  middleArray.push(array[Math.floor(array.length / 2)]);
+  } else {
+  middleArray.push(array[array.length / 2 - 1], array[array.length / 2]);
+  }
+  return middleArray;
+  };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [3, 2, 1]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
+  module.exports = middle;
