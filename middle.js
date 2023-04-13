@@ -1,41 +1,30 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅ Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
-
+// Implement middle which will take in an array and return the middle-most element(s) of the given array.
 const middle = function(array) {
-   const middleArray = [];
-        if (array.length <= 2) {
-          return middleArray;
-  } else if (array.length % 2 !== 0) {
-  middleArray.push(array[Math.floor(array.length / 2)]);
+  // Create the new array that the middle value(s) will be returned to
+  let newArray = [];
+  //
+  if (array.length === 1 || array.length === 2) {
+    return newArray;
+  } else if (array.length % 2 === 0) {
+    var evenArr = (array.length - 1) / 2;
+    // evenArr = 2.5: need to round up and down to return elemnts in the middle
+    var intDown = Math.floor(evenArr);
+    var intUp = Math.ceil(evenArr);
+    // console.log(intDown);
+    // console.log(intUp);
+    // console.log(`The indexes are ${intDown} and ${intUp}`);
+    // console.log(`The elements are ${array[intDown]} and ${array[intUp]}`);
+    newArray.push(array[intDown]);
+    newArray.push(array[intUp]);
+    return newArray;
   } else {
-  middleArray.push(array[array.length / 2 - 1], array[array.length / 2]);
+    var oddArr = (array.length - 1) / 2;
+    // console.log("Index is ", oddArr);
+    // console.log("Element is :", array[oddArr]);
+    newArray.push(array[oddArr]);
+    return newArray;
   }
-  return middleArray;
-  };
+};
 
-  module.exports = middle;
+module.exports = middle;
