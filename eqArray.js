@@ -1,16 +1,29 @@
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    // test 1: console.log("start of loop", array1[i]);
-    if (array1[i] !== array2[i]) {
-      //test 2: console.log("non match found", array1[i], array2[i]);
-      return false;
+const eqArrays = function(arr1, arr2) {
+  // input: two arrays
+  // output: boolean, True if arr1 is equivalent to arr2, False if arr1 is not equivalent to arr2
+
+  let equal = true;
+  //Test to see if arr1 has the same length as arr2
+  if (arr1.length === arr2.length) {
+    // if the length of arr1 and arr2 are the same, test to see if arr1[index] == arr2[index]
+    for (let i = 0; i < arr1.length; i++) {
+      if (Array.isArray(arr1[i])) {
+        equal =  eqArrays(arr1[i], arr2[i]);
+      } else if (arr1[i] === arr2[i]) {
+        equal = true;
+      } else {
+        equal = false;
+        return equal;
+      }
     }
+  } else {
+    equal = false;
+    return equal;
   }
-  return true;
+
+  return equal;
 };
+
 module.exports = eqArrays;
 
 
@@ -20,5 +33,3 @@ module.exports = eqArrays;
 
 
 
-
-;

@@ -1,6 +1,8 @@
 
 const assert = require("chai").assert;
-const head = require("../head");
+const index = require('../index');
+const head   = index.head;
+
 
 describe("#head", () => {
   // 1
