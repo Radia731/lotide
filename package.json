@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@radia/lotide",
+  "version": "1.0.2",
+  "description": "Lotide Project",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Radia731/lotide.git"
   },
-  "author": "",
+  "author": "RADIA",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Radia731/lotide/issues"
