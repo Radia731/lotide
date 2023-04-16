@@ -1,27 +1,14 @@
-const eqArray = require('../eqArray');
+const assert = require('chai').assert;
+const eqArrays = require('../eqArrays');
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-assertEqual(90, 90);
-assertEqual(32, 89);
-
-const assertEqual = require("../assertEqual");
-const eqArrays = require("../eqArrays");
+describe("#eqArrays", () => {
+  it("If both arrays matched, returns true", () => {
+    assert.strictEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true);
+  });
+  it("If both arrays not matched, returns false", () => {
+    assert.strictEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false);
+  });
+  it("If both arrays not matched,returns false", () => {
+    assert.strictEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false);
+  });
+});

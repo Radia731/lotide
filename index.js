@@ -1,5 +1,8 @@
-const shortHandobject = require('./shortHandobject');
-
+const head = require('./head');
+const tail = require('./tail');
+const middle = require('./middle');
 module.exports = {
-  shortHandobject: { italy }
-}
+  head: head,
+  tail: tail,
+  middle: middle
+};

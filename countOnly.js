@@ -1,35 +1,15 @@
-const countOnly = function(allItems, itemsToCount) {
-  const results = {};
-
-  for (const item of allItems) {
-    if (itemsToCount[item]) {
-      if (results[item]) {
-        results[item] += 1;
-      } else {
-        results[item] = 1;
-      }
+const countLetters = function(letters) {
+  // Create a new object to store the count for each letter
+  const count = {};
+  for (const letter of letters) {
+    if (letter !== " ") {
+      // Only process this condition if the characeter is not a space
+      // Below checks if the key existed in `count`, if it is not then initial
+      // with first count with value 1 and if existed then add +1 to the key
+      count[letter] = letter in count ? count[letter] + 1 : 1;
     }
   }
-
-  return results;
+  return count;
 };
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
-
+module.exports = countLetters;

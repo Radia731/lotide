@@ -1,18 +1,18 @@
-// Mapping an array of numbers to an array of their squares
-const numbers = [1, 2, 3, 4, 5];
-const squares = numbers.map((num) => num ** 2);
-assertArraysEqual(squares, [1, 4, 9, 16, 25]);
+const middle = function(inputArray) {
+  if (inputArray.length < 3) {
+    // If the array.length is less than two elements, return empty
+    return [];
+  }
 
-// Mapping an array of names to an array of their lengths
-const names = ["Alice", "Bob", "Charlie", "David"];
-const nameLengths = names.map((name) => name.length);
-assertArraysEqual(nameLengths, [5, 3, 7, 5]);
+  if (inputArray.length % 2 === 0) {
+    // If the array.length has an even number, output the two elements
+    const middleArr = Math.floor(inputArray.length / 2);
+    return inputArray.slice(middleArr - 1, middleArr + 1);
+  } else {
+    // Else would be consider an odd number, output the one element
+    const middleArr = Math.floor(inputArray.length / 2);
+    return inputArray.slice(middleArr, middleArr + 1);
+  }
+};
 
-// Mapping an array of objects to an array of their properties
-const people = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 30 },
-  { name: "Charlie", age: 35 }
-];
-const ages = people.map((person) => person.age);
-assertArraysEqual(ages, [25, 30, 35]);
+module.exports = middle;

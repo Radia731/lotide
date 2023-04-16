@@ -1,9 +1,6 @@
-const assertEqual = require("./assertEqual");
+const head = function(a) {
+  // Return the first element
+  return a[0];
+};
 
-function head(array) {
-  return array[0];
-}
 module.exports = head;
-
-// console.log([]);
-// console.log(head([]));

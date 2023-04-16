@@ -1,23 +1,17 @@
-
-const index = require('../index');
-const eqArrays = index.eqArrays;
 const assert = require('chai').assert;
-const middle = index.middle;
+const middle = require('../middle');
 
 describe("#middle", () => {
-  it("returns [2,3] for [1, 2, 3, 4]", () => {
-    assert.strictEqual(eqArrays(middle([1, 2, 3, 4]), [2, 3]), true);
+  it("Find the middle element of '[1]', returns []", () => {
+    assert.deepEqual(middle([1]), []);
   });
-
-  it("returns [] for ['5']", () => {
-    assert.strictEqual(eqArrays(middle([1]), []), true);
+  it("Find the middle element of '[1, 2]', returns []", () => {
+    assert.deepEqual(middle([1, 2]), []);
   });
-
-  it("returns [] for []", () => {
-    assert.strictEqual(eqArrays(middle([]), []), true);
+  it("Find the middle element of '[1, 2, 3]', eturns [2]", () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
   });
-
-  it("returns [2, 3] for [1, 2, 3, 4]", () => {
-    assert.strictEqual(eqArrays(middle([1, 2, 3, 4]), [1]), false);
+  it("Find the middle element of '[1, 2, 3, 4]', returns [2, 3]", () => {
+    assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
   });
 });
