@@ -1,4 +1,4 @@
-const head = function(a) {
+const head = function (a) {
   // Return the first element
   return a[0];
 };

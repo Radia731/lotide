@@ -1,8 +1,8 @@
-const takeUntil = function(array, callback) {
+const takeUntil = function (array, callback) {
   const takeArray = [];
   for (const data of array) {
     if (callback(data)) {
-      break; // Stop processing loop if true
+      break;
     } else {
       takeArray.push(data);
     }

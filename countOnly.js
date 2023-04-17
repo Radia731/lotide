@@ -1,4 +1,4 @@
-const countLetters = function(letters) {
+const countLetters = function (letters) {
   // Create a new object to store the count for each letter
   const count = {};
   for (const letter of letters) {

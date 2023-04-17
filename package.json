@@ -2,9 +2,9 @@
   "name": "@radia/lotide",
   "version": "1.0.3",
   "description": "Lotide Project",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": ""
   },
   "scripts": {
     "test": "mocha"

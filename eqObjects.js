@@ -4,7 +4,11 @@ const eqObjects = (object1, object2) => {
   }
 
   for (const key of Object.keys(object1)) {
-    if (typeof object1[key] === 'object' && !Array.isArray(object2[key]) && object1[key] !== null) {
+    if (
+      typeof object1[key] === "object" &&
+      !Array.isArray(object2[key]) &&
+      object1[key] !== null
+    ) {
       if (!eqObjects(object1[key], object2[key])) {
         return false;
       }

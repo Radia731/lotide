@@ -1,4 +1,4 @@
-const without = function(inputArray, removeElement) {
+const without = function (inputArray, removeElement) {
   // To make sure it is non-destructive of the original array.
   const newArray = [];
 

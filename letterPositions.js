@@ -1,4 +1,4 @@
-const letterPositions = function(sentence) {
+const letterPositions = function (sentence) {
   // Declare object
   const results = {};
 
@@ -13,7 +13,6 @@ const letterPositions = function(sentence) {
         // If the letter doesn't exist in the object key
         // Add key as array
         results[letter] = [i];
-
       } else {
         // If not push a value into the array
         results[letter].push(i);

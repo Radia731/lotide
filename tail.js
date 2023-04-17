@@ -1,4 +1,4 @@
-const tail = function(a) {
+const tail = function (a) {
   return a.slice(1);
 };
 

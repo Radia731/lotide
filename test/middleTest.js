@@ -1,5 +1,5 @@
-const assert = require('chai').assert;
-const middle = require('../middle');
+const assert = require("chai").assert;
+const middle = require("../middle");
 
 describe("#middle", () => {
   it("Find the middle element of '[1]', returns []", () => {

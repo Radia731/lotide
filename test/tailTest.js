@@ -1,6 +1,5 @@
-const assert = require('chai').assert;
-const tail = require('../tail');
-
+const assert = require("chai").assert;
+const tail = require("../tail");
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 
@@ -17,7 +16,7 @@ describe("#tail", () => {
 });
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); 
+tail(words);
 
 describe("#words", () => {
   it("returns 3", () => {

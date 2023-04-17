@@ -1,5 +1,5 @@
-const assert = require('chai').assert;
-const assertEqual = require('../assertEqual');
+const assert = require("chai").assert;
+const assertEqual = require("../assertEqual");
 describe("#assertEqual", () => {
   it(`Compare "Lighthouse Labs", "Bootcamp", return false`, () => {
     assert.isFalse(assertEqual("Lighthouse Labs", "Bootcamp"));
@@ -13,4 +13,4 @@ describe("#assertEqual", () => {
   it(`Compare 1, 2, return false`, () => {
     assert.isFalse(assertEqual(1, 2));
   });
-})
+});

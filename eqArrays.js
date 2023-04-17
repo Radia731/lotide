@@ -1,4 +1,4 @@
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
     // Return immediately false of array length not matched.
     return false;
@@ -8,7 +8,7 @@ const eqArrays = function(array1, array2) {
     // Condidion if the element is an Array itself
     if (Array.isArray(array1[i])) {
       if (!eqArrays(array1[i], array2[i])) {
-      // Recursive the element to check within again
+        // Recursive the element to check within again
         return false;
       }
     } else if (array1[i] !== array2[i]) {
@@ -22,10 +22,3 @@ const eqArrays = function(array1, array2) {
 };
 
 module.exports = eqArrays;
-
-
-
-
-
-
-
